@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "build": "tsc app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./app-test.sh"
   },
   "author": "",
   "license": "ISC",
