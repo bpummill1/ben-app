@@ -1,4 +1,4 @@
-var uppercase = require('upper-case');
+import upperCase = require('upper-case');
 
 var message = 'hi ben';
-console.log(uppercase(message));
+console.log(upperCase(message));
