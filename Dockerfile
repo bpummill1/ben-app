@@ -1,8 +1,9 @@
 FROM node:8.4.0-alpine
 
 RUN mkdir /app
-ADD app.ts package.json /app/
+ADD package.json /app/
+ADD node_modules /app/node_modules
+ADD app.js /app/
 WORKDIR /app
-RUN npm install && npm run build
 
-CMD npm run start
+CMD ["npm", "run", "start", "-s"]
