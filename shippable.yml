@@ -8,7 +8,7 @@ build:
     - npm install
     - npm run build
     - npm run test
-  post-ci:
+  post_ci:
     - docker build -t bpummill1/$REPO_NAME:$BRANCH.$BUILD_NUMBER .
 
   push:
