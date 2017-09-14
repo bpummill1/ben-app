@@ -8,3 +8,9 @@ build:
     - npm install
     - npm run build
     - npm run test
+
+integrations:
+    notifications:
+      - integrationName: shippable-build-status
+        type: slack
+        recipients: "#ben-app-shippable"
