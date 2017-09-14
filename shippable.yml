@@ -9,10 +9,19 @@ build:
     - npm run build
     - npm run test
   post-ci:
-    - docker build -t bens-app .
+    - docker build -t bpummill1/$REPO_NAME:$BRANCH.$BUILD_NUMBER .
+
+  push:
+    - docker push bpummill1/$REPO_NAME:$BRANCH.$BUILD_NUMBER
+
+#Section for Integrations
 
 integrations:
     notifications:
       - integrationName: shippable-build-status
         type: slack
         recipients: "#ben-app-shippable"
+
+    hub:
+      - integrationName: bens-dockerhub
+        type: docker
